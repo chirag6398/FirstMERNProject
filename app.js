@@ -2,14 +2,19 @@ const dotenv = require("dotenv");
 const express = require("express");
 const app = express();
 
+// const User = require("./model/userSchena");
 // below line is added only in same folder only
+
 dotenv.config({ path: "./config.env" });
+
 require("./db/conn");
 
 const PORT = process.env.PORT;
 
 // Middleware
-
+app.use(require("./Routes/auth"));
+// data comes in json formate converted in object formate
+app.use(express.json());
 const middleware = (req, res, next) => {
   console.log("hello i am middleware");
   next();
