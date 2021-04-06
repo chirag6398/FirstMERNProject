@@ -1,3 +1,4 @@
+const bcrypt = reqire("bcryptjs");
 const express = require("express");
 const router = express.Router();
 require("../db/conn");
@@ -35,6 +36,7 @@ router.post("/register", async (req, res) => {
     console.log(err);
   }
 });
+
 router.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -44,7 +46,13 @@ router.post("/signin", async (req, res) => {
     }
     const userExist = await User.findOne({ email });
     if (userExist) {
-      console.log(userExist);
+      const isMatch = await bcrypt.compare(password, userExist.password);
+      if (!isMatch) {
+        console.log(userExist);
+      } else {
+        console.log("invalid email and password");
+        res.status(422).json({ errror: "user not exist" });
+      }
     } else {
       console.log("invalid email and password");
       res.status(422).json({ errror: "user not exist" });
