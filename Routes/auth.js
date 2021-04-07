@@ -1,4 +1,5 @@
-const bcrypt = reqire("bcryptjs");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 const express = require("express");
 const router = express.Router();
 require("../db/conn");
@@ -39,6 +40,7 @@ router.post("/register", async (req, res) => {
 
 router.post("/signin", async (req, res) => {
   try {
+    let token;
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -47,15 +49,20 @@ router.post("/signin", async (req, res) => {
     const userExist = await User.findOne({ email });
     if (userExist) {
       const isMatch = await bcrypt.compare(password, userExist.password);
+      token = await userExist.generateAuthToken();
+      res.cookie("jwttoken", token, {
+        expires: new Date(Date.now() + 2589200000),
+        httpOnly: true,
+      });
       if (!isMatch) {
         console.log(userExist);
       } else {
-        console.log("invalid email and password");
-        res.status(422).json({ errror: "user not exist" });
+        console.log("invalid password");
+        res.status(422).json({ errror: "password wrong" });
       }
     } else {
-      console.log("invalid email and password");
-      res.status(422).json({ errror: "user not exist" });
+      console.log("invalid credentials");
+      res.status(422).json({ errror: "user not exit with this email" });
     }
   } catch (err) {
     console.log(err);
