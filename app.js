@@ -9,6 +9,9 @@ dotenv.config({ path: "./config.env" });
 require("./db/conn");
 
 const PORT = process.env.PORT || 5000;
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 // Middleware
 app.use(express.json());
@@ -20,10 +23,6 @@ app.use(require("./Routes/auth"));
 // app.get("/signup", (req, res) => {
 //   res.send("hello from register");
 // });
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
