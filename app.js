@@ -1,49 +1,30 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const app = express();
-
-// const User = require("./model/userSchena");
+const cookieParser = require("cookie-parser");
 // below line is added only in same folder only
 
 dotenv.config({ path: "./config.env" });
 
 require("./db/conn");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(require("./Routes/auth"));
-// data comes in json formate converted in object formate
 app.use(express.json());
-const middleware = (req, res, next) => {
-  console.log("hello i am middleware");
-  next();
-};
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
 
-// middleware ends
-
-// require("./Routes/routes");
-
-app.get("/", (req, res) => {
-  res.send("hello from backened");
-});
-
-app.get("/aboutme", middleware, (req, res) => {
-  res.send("hello from about me");
-});
-
-app.get("/contact", (req, res) => {
-  res.send("hello from contact");
-});
-
-app.get("/signin", (req, res) => {
-  res.send("hello from login");
-});
+app.use(require("./Routes/auth"));
 
 app.get("/signup", (req, res) => {
   res.send("hello from register");
 });
-// routes end
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
 });
