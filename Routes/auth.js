@@ -5,9 +5,6 @@ const authenticate = require("../middleware/authenticate");
 require("../db/conn");
 const User = require("../model/userSchema");
 
-router.get("/", async (req, res) => {
-  res.send("i am from auth file");
-});
 
 router.post("/register", async (req, res) => {
   try {

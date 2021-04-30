@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(require("./Routes/auth"));
 
-app.get("/signup", (req, res) => {
-  res.send("hello from register");
-});
+// app.get("/signup", (req, res) => {
+//   res.send("hello from register");
+// });
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
