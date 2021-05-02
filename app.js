@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
-
+const path = require("path");
 dotenv.config({ path: "./config.env" });
 
 require("./db/conn");
@@ -17,14 +17,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(require("./Routes/auth"));
 
 if (process.env.NODE_ENV === "production") {
-  const path = require("path");
+  // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  // Handle React routing, return all requests to React app
+  app.get("*", function (req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
-
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
 });
