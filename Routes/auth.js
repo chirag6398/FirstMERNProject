@@ -5,7 +5,6 @@ const authenticate = require("../middleware/authenticate");
 require("../db/conn");
 const User = require("../model/userSchema");
 
-
 router.post("/register", async (req, res) => {
   try {
     const { name, email, phone, work, password, cpassword } = req.body;
@@ -81,11 +80,11 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-router.get("/about", authenticate, (req, res) => {
+router.get("/api/about", authenticate, (req, res) => {
   res.status(201).send(req.rootUser);
 });
 
-router.get("/logout", (req, res) => {
+router.get("/api/logout", (req, res) => {
   res.clearCookie("jwttoken", { path: "/" });
   res.status(201).send("user logout successfully");
   console.log("logout router");

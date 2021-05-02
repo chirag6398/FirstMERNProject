@@ -2,7 +2,6 @@ const dotenv = require("dotenv");
 const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
-// below line is added only in same folder only
 
 dotenv.config({ path: "./config.env" });
 
@@ -17,9 +16,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(require("./Routes/auth"));
 
-// app.get("/signup", (req, res) => {
-//   res.send("hello from register");
-// });
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   const path = require("path");
