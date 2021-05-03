@@ -87,7 +87,6 @@ router.get("/api/about", authenticate, (req, res) => {
 router.get("/api/logout", (req, res) => {
   res.clearCookie("jwttoken", { path: "/" });
   res.status(201).send("user logout successfully");
-  console.log("logout router");
 });
 
 router.post("/contact", authenticate, async (req, res) => {
