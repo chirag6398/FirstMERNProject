@@ -1,0 +1,14 @@
+.nav__container {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+}
+.align__right {
+  display: flex;
+  flex-direction: row;
+  flex-grow: inherit;
+}
+.nav__logoImg {
+  object-fit: contain;
+  height: 50px;
+}

@@ -1,0 +1,146 @@
+.register__outsideContainer {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.register__centerDiv {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 20px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 3px 9px -8px rgb(0, 0, 0.5);
+}
+.register__fieldCloser>label>.MuiSvgIcon-root {
+  color: #fffffe !important;
+}
+.register__formContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register__formField {
+  display: flex;
+  width: 311px;
+  height: 10vh;
+  align-items: center;
+}
+.register__fieldCloser {
+  display: flex;
+  align-items: center;
+  width: 297px;
+}
+.register__fieldCloser > label {
+  margin-bottom: 0px;
+  margin-right: 3px;
+}
+.register__fieldCloser::after {
+  content: "_______________________________________________";
+  position: relative;
+  top: 16px;
+  left: -199px;
+}
+.register__password::after {
+  content: "_______________________________________________";
+  position: relative;
+  top: 16px;
+  left: -224px;
+}
+
+/* .register__fieldCloser > input {
+  border: none;
+  background: transparent;
+} */
+.register__fieldCloser > input[type="text" i]{
+  border: none;
+  color:#fffffe;
+  
+  background-color: #004643;
+  
+  min-height: 45px;
+  
+  
+}
+.register__fieldCloser > input[type="email" i]{
+  border: none;
+  color:#fffffe;
+  
+  background-color: #004643;
+  
+  min-height: 45px;
+  
+  
+}
+.register__fieldCloser > input[type="password" i]{
+  border: none;
+  color:#fffffe;
+  
+  background-color: #004643;
+  
+  min-height: 45px;
+  
+  
+}
+.register__fieldCloser > input:focus {
+  outline: none;
+}
+.register__submitButton {
+  border: none;
+  background: #f9bc60;
+  border-radius: 3px;
+  height: 30px;
+  width: 150px;
+  font-weight: 600;
+  transition: all 1s linear;
+}
+.register__submitButton:hover {
+  box-shadow: -5px 5px 9px -9px rgb(0, 0, 1);
+background-color:#da8f1e;
+}
+.register__illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register__illustration > img {
+  object-fit: contain;
+  height: 300px;
+  animation-name: illustrator;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes illustrator {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+@media screen and (max-width: 812px) {
+  .register__centerDiv {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-top: 338px;
+
+    height: auto;
+    border: none;
+  }
+  .register__formContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+  }
+}

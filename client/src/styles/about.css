@@ -1,0 +1,132 @@
+/* .container {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding-top: 10vh;
+}
+.boxes {
+  width: 30vw;
+  height: 20vh;
+  margin: 20px 20px;
+  background-color: black;
+}
+.contact__backgroungAnimation1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  animation-name: star;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+img {
+  object-fit: contain;
+  height: 70px;
+}
+.contact__backgroungAnimation2 {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  animation-name: star;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation3 {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+  animation-name: star;
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation4 {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  animation-name: star;
+  animation-delay: 2.5s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation5 {
+  position: absolute;
+  top: 0px;
+  left: 350px;
+  animation-name: star;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation6 {
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  animation-name: star;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation7 {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  animation-name: star;
+  animation-delay: 2s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation8 {
+  position: absolute;
+  top: 0px;
+  left: 550px;
+  animation-name: star;
+  animation-delay: 2.5s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation9 {
+  position: absolute;
+  top: 0px;
+  left: 600px;
+  animation-name: star;
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+.contact__backgroungAnimation10 {
+  position: absolute;
+  top: 0px;
+  left: 650px;
+  animation-name: star;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+  animation-direction: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes star {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(100px, 700px) rotate(200deg);
+  }
+} */

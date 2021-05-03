@@ -1,0 +1,126 @@
+.login__extDiv {
+  position: absolute;
+  /* top: 0px; */
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.login__centerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 400px;
+  min-width: 450px;
+
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 3px;
+  box-shadow: 1px 3px 9px -8px rgb(0, 0, 0.5);
+}
+.login__leftSide {
+  display: flex;
+  height: 404px;
+  flex: 0.4;
+}
+.login__rightSide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  min-width: 276px;
+}
+.login__formField {
+  display: flex;
+  margin-top: 50px;
+  max-width: 242px;
+}
+.login__fieldCloser {
+  display: flex;
+  color: gray;
+  height: 40px;
+  max-width: 243px;
+  align-items: center;
+}
+.login__fieldCloser > label > .MuiSvgIcon-root {
+  color: rgb(56, 54, 54) !important;
+}
+.login__fieldCloser > .MuiSvgIcon-root {
+  color: rgb(56, 54, 54) !important;
+}
+.login__fieldCloser >input[type="email" i]{
+  border: none;
+  color:#fffffe;
+  margin-left:3px;
+  background-color: #004643;
+}
+.login__fieldCloser >input[type="password" i]{
+  border: none;
+  color:#fffffe;
+  margin-left:3px;
+  background-color: #004643;
+}
+.login__fieldCloser > input:focus {
+  outline: none;
+ 
+}
+.login__fieldCloser>label>.MuiSvgIcon-root{
+  color:#fffffe !important;
+}
+.login__fieldCloser::after {
+  content: "____________________________________";
+  position: relative;
+  top: 16px;
+  left: -189px;
+}
+.login__password::after {
+  content: "____________________________________";
+  position: relative;
+  top: 16px;
+  left: -215px;
+}
+.login__submitButton {
+  border: none;
+  background: cornflowerblue;
+  border-radius: 3px;
+  height: 35px;
+  width: 100px;
+  font-weight: 500;
+  color: white;
+
+  transition: all 1s linear;
+}
+.login__submitButton:hover {
+  box-shadow: 1px 3px 9px -8px rgb(0, 0, 0.5);
+  background-color: rgb(85, 118, 216);
+}
+.login__leftSide > img {
+  object-fit: contain;
+  height: 300px;
+  animation-name: illustrator;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes illustrator {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
+@media screen and (max-width: 712px) {
+  .login__centerDiv {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+    min-width: 450px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+}
