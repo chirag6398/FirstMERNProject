@@ -8,6 +8,7 @@ dotenv.config({ path: "./config.env" });
 require("./db/conn");
 
 const PORT = process.env.PORT || 5000;
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 // Middleware
 app.use(express.json());
@@ -16,14 +17,16 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(require("./Routes/auth"));
 
-if (process.env.NODE_ENV === "production") {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, "client/build")));
-  // Handle React routing, return all requests to React app
-  app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
-  });
-}
+app.get("*", function (req, res) {
+  res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+});
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.resolve(__dirname, "client/build")));
+
+//   app.get("*", function (req, res) {
+//     res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+//   });
+// }
 app.listen(PORT, () => {
   console.log(`server is running at port ${PORT}`);
 });
