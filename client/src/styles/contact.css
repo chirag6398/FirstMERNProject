@@ -13,7 +13,7 @@
   color: #fffffe;
   justify-content: space-between;
   min-height: 100px;
-
+  min-width: 294px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
@@ -42,12 +42,13 @@
   flex-direction: column;
   background-color: #33715f;
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 0.1);
-  height: 55vh;
+  height: auto;
+  min-width: 294px;
   padding: 20px;
 }
 .contact__userInputFields {
   display: flex;
-  width: 100%;
+  width: auto;
   height: fit-content;
   flex-wrap: wrap;
   color: #fffffe;
@@ -60,16 +61,20 @@
 
   background-color: #004643;
   border: 2px solid #001e1d;
-  min-height: 45px;
+  min-height: 55px;
+  min-width: 250px;
+  margin: 20px 0px;
   text-align: center;
 }
 .contact__userInputFields > .contact__input1 > input[type="email" i] {
   border: none;
   color: #fffffe;
-
+  min-height: 55px;
+  min-width: 250px;
+  margin: 20px 0px;
   background-color: #004643;
   border: 2px solid #001e1d;
-  min-height: 45px;
+
   text-align: center;
 }
 .contact__userInputFields > .contact__input1 > input[type="number" i] {
@@ -79,6 +84,9 @@
   border: 2px solid #001e1d;
   min-height: 45px;
   text-align: center;
+  min-height: 55px;
+  min-width: 250px;
+  margin: 20px 0px;
 }
 .contact__userInputFields > .contact__input1 > input:focus {
   outline: none;
@@ -105,6 +113,7 @@
 }
 .contact__button {
   width: 100%;
+  margin-top: 12px;
   min-height: 34px;
 }
 .contact__button > button {
@@ -123,4 +132,31 @@
 .contact__button > button:hover {
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 1);
   background-color: #da8f1e;
+}
+
+@media screen and (max-width: 993px) {
+  .contact__content {
+    margin-top: 200px;
+  }
+}
+@media screen and (max-width: 694px) {
+  .contact__content {
+    margin-top: 319px;
+  }
+}
+@media screen and (max-width: 645px) {
+  .contact__content {
+    margin-top: 469px;
+  }
+  .contact__sample1 {
+    align-items: center;
+    justify-content: center;
+  }
+  .conatct__box {
+    width: 100%;
+  }
+  .contact__input1,
+  input {
+    width: 100%;
+  }
 }

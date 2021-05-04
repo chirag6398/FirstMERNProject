@@ -1,6 +1,4 @@
 .register__outsideContainer {
-  position: absolute;
-  top: 0px;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -18,7 +16,7 @@
   border-radius: 3px;
   box-shadow: 1px 3px 9px -8px rgb(0, 0, 0.5);
 }
-.register__fieldCloser>label>.MuiSvgIcon-root {
+.register__fieldCloser > label > .MuiSvgIcon-root {
   color: #fffffe !important;
 }
 .register__formContent {
@@ -59,35 +57,29 @@
   border: none;
   background: transparent;
 } */
-.register__fieldCloser > input[type="text" i]{
+.register__fieldCloser > input[type="text" i] {
   border: none;
-  color:#fffffe;
-  
+  color: #fffffe;
+
   background-color: #004643;
-  
+
   min-height: 45px;
-  
-  
 }
-.register__fieldCloser > input[type="email" i]{
+.register__fieldCloser > input[type="email" i] {
   border: none;
-  color:#fffffe;
-  
+  color: #fffffe;
+
   background-color: #004643;
-  
+
   min-height: 45px;
-  
-  
 }
-.register__fieldCloser > input[type="password" i]{
+.register__fieldCloser > input[type="password" i] {
   border: none;
-  color:#fffffe;
-  
+  color: #fffffe;
+
   background-color: #004643;
-  
+
   min-height: 45px;
-  
-  
 }
 .register__fieldCloser > input:focus {
   outline: none;
@@ -103,7 +95,7 @@
 }
 .register__submitButton:hover {
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 1);
-background-color:#da8f1e;
+  background-color: #da8f1e;
 }
 .register__illustration {
   display: flex;
@@ -142,5 +134,8 @@ background-color:#da8f1e;
     justify-content: center;
     margin-top: 100px;
     align-items: center;
+  }
+  input {
+    min-width: 178px;
   }
 }

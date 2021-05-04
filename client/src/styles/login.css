@@ -1,6 +1,4 @@
 .login__extDiv {
-  position: absolute;
-  /* top: 0px; */
   display: flex;
   width: 100vw;
   min-height: 100vh;
@@ -12,7 +10,7 @@
   flex-wrap: wrap;
   min-height: 400px;
   min-width: 450px;
-
+  margin-bottom: 20px;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
@@ -49,24 +47,25 @@
 .login__fieldCloser > .MuiSvgIcon-root {
   color: rgb(56, 54, 54) !important;
 }
-.login__fieldCloser >input[type="email" i]{
+.login__fieldCloser > input[type="email" i] {
   border: none;
-  color:#fffffe;
-  margin-left:3px;
+  color: #fffffe;
+  margin-left: 3px;
+  min-width: 167px;
   background-color: #004643;
 }
-.login__fieldCloser >input[type="password" i]{
+.login__fieldCloser > input[type="password" i] {
   border: none;
-  color:#fffffe;
-  margin-left:3px;
+  color: #fffffe;
+  margin-left: 3px;
+  min-width: 167px;
   background-color: #004643;
 }
 .login__fieldCloser > input:focus {
   outline: none;
- 
 }
-.login__fieldCloser>label>.MuiSvgIcon-root{
-  color:#fffffe !important;
+.login__fieldCloser > label > .MuiSvgIcon-root {
+  color: #fffffe !important;
 }
 .login__fieldCloser::after {
   content: "____________________________________";
@@ -97,7 +96,7 @@
 }
 .login__leftSide > img {
   object-fit: contain;
-  height: 300px;
+  height: 290px;
   animation-name: illustrator;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -122,5 +121,6 @@
     justify-content: center;
     align-items: center;
     border: none;
+    box-shadow: none;
   }
 }
