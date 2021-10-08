@@ -1,11 +1,34 @@
 import React, { useContext } from "react";
 import "../styles/nav.css";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import { Link ,useHistory} from "react-router-dom";
 import { UserContext } from "../App";
 
 export default function Nav() {
-  const { state } = useContext(UserContext);
+  const { state,dispatch } = useContext(UserContext);
+  const history = useHistory();
+  
+  const logoutHandler=()=>{
+    fetch("/api/logout", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+      .then((res) => {
+        dispatch({ type: "USER", payload: false });
+        history.push("/login");
+        if (res.status !== 201) {
+          const error = new Error(res.error);
+          throw error;
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
   return (
     <div className="nav__container" style={{ backgroundColor: "#8AA1B1" }}>
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -61,7 +84,8 @@ export default function Nav() {
                 Contact
               </Link>
             </li>
-            {!state ? (
+            {
+            !state ? (
               <>
                 <li className="nav-item">
                   <Link
@@ -94,18 +118,19 @@ export default function Nav() {
               </>
             ) : (
               <li className="nav-item">
-                <Link
+                <div
                   className="nav-link "
                   style={{
                     color: "#fffffe",
                     fontWeight: "600",
                     letterSpacing: "1px",
+                    cursor:"pointer"
                   }}
-                  to="/logout"
+                  onClick={logoutHandler}
                   tabIndex="-1"
                 >
                   logout
-                </Link>
+                </div>
               </li>
             )}
           </ul>

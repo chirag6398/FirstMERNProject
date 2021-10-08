@@ -51,14 +51,14 @@ export default function About() {
           style={{
             minWidth: "500px",
             height: "auto",
-            border: "1px solid black",
+            border: "1px solid #4A5043",
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            backgroundColor: "#f25f4c",
+            backgroundColor: "#B9D8C2",
             padding: "20px 0px",
             borderRadius: "3px",
-            color: "white",
+            color: "#4A5043",
             boxShadow: "-3px 4px 9px -6px rgb(0,0,0.1)",
           }}
         >

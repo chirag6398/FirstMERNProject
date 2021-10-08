@@ -21,7 +21,7 @@ export default function Register() {
     password: "",
     cpassword: "",
   });
-  
+  const [proccesing,setProcessing]=useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   let divRef = useRef(null);
@@ -40,6 +40,7 @@ export default function Register() {
   const submitHandler = async (e) => {
     try {
       e.preventDefault();
+      setProcessing(true);
       const { name, email, phone, work, password, cpassword } = user;
 
       const res = await fetch("/register", {
@@ -53,6 +54,7 @@ export default function Register() {
       const data = await res.json();
 
       if (data.status === 422 || !data) {
+        setProcessing(false);
         window.alert("unsuccesssful regis...");
       } else {
         window.alert("successful registration");
@@ -200,7 +202,7 @@ export default function Register() {
             </div>
             <div className="register__formField">
               <button type="submit" className="register__submitButton">
-                Register
+              {proccesing?<span>proccesing</span>:<span>Register</span>}
               </button>
             </div>
           </form>
