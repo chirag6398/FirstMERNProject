@@ -12,3 +12,28 @@
   object-fit: contain;
   height: 50px;
 }
+.nav-item{
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 100px;
+  text-align: center;
+  margin: 0px 10px;
+  box-shadow: 0px 0px 3px 0px rgb(0 0 1);
+ 
+}
+.navbar-brand{
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px 0px rgb(0 0 1);
+}
+@media (max-width:992px) {
+  .nav-item{
+    margin: 10px;
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -31,8 +31,7 @@ export default function Nav() {
                 to="/"
                 style={{
                   color: "#fffffe",
-                  fontWeight: "600",
-                  letterSpacing: "1px",
+                 
                 }}
               >
                 Home
@@ -43,8 +42,7 @@ export default function Nav() {
                 className="nav-link"
                 style={{
                   color: "#fffffe",
-                  fontWeight: "600",
-                  letterSpacing: "1px",
+                 
                 }}
                 to="/about"
               >
@@ -56,8 +54,7 @@ export default function Nav() {
                 className="nav-link"
                 style={{
                   color: "#fffffe",
-                  fontWeight: "600",
-                  letterSpacing: "1px",
+                 
                 }}
                 to="/contact"
               >
