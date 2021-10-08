@@ -12,6 +12,7 @@
   min-width: 450px;
   margin-bottom: 20px;
   justify-content: center;
+  background-color: #B9D8C2;
   align-items: center;
   border: 2px solid black;
   border-radius: 3px;
@@ -81,10 +82,11 @@
 }
 .login__submitButton {
   border: none;
-  background: cornflowerblue;
+  background: #FFCB47;
   border-radius: 3px;
   height: 35px;
-  width: 100px;
+  width: 100%;
+  
   font-weight: 500;
   color: white;
 
@@ -92,7 +94,7 @@
 }
 .login__submitButton:hover {
   box-shadow: 1px 3px 9px -8px rgb(0, 0, 0.5);
-  background-color: rgb(85, 118, 216);
+  background-color: #c49624;
 }
 .login__leftSide > img {
   object-fit: contain;

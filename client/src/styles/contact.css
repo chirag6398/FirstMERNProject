@@ -31,14 +31,14 @@
   margin-top: 10px;
   background-color: white !important;
   border-radius: 4px;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
   min-width: 270px;
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 1);
   padding: 10px 10px;
 }
 .contact__sample2 {
   display: flex;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
   flex-direction: column;
   background-color: white !important;
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 0.1);
@@ -60,7 +60,7 @@
   color: #4A5043;
 
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
   min-height: 55px;
   min-width: 250px;
   margin: 20px 0px;
@@ -73,7 +73,7 @@
   min-width: 250px;
   margin: 20px 0px;
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
 
   text-align: center;
 }
@@ -81,7 +81,7 @@
   border: none;
   color: #4A5043 !important;
   background-color: transparent !important;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
   min-height: 45px;
   text-align: center;
   min-height: 55px;
@@ -100,7 +100,7 @@
   width: 100%;
 
   background: none;
-  border: 2px solid black;
+  border: 2px solid #4A5043;
   padding: 20px;
 
   color: #4A5043;
@@ -118,11 +118,12 @@
 }
 .contact__button > button {
   background-color: #FFCB47;
-  width: 150px;
-  border: 1px solid black;
+ border: none;
+  width: 100%;
   border-radius: 5px;
   min-width: 150px;
   text-align: center;
+  height: 40px;
   color: black;
   font-size: 20px;
   font-weight: 500;
