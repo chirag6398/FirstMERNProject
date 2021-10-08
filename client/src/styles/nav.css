@@ -5,7 +5,7 @@
 }
 .align__right {
   display: flex;
-  flex-direction: row;
+  
   flex-grow: inherit;
 }
 .nav__logoImg {
