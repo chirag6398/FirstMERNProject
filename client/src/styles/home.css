@@ -15,7 +15,7 @@
   align-items: center;
 }
 .home__content > p {
-  color: blue;
+  color: #4A5043;;
   font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   font-size: large;
@@ -32,7 +32,7 @@
   left: 0px;
   width: 50%;
   height: 100vh;
-  background-color: rgb(224, 167, 167);
+  background-color: #9AC2C9;;
 }
 .home__rightDiv {
   display: flex;

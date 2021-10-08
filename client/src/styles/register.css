@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
+  background-color: #B9D8C2;
   margin-top: 50px;
   padding: 20px;
   height: auto;
@@ -53,31 +54,28 @@
   left: -224px;
 }
 
-/* .register__fieldCloser > input {
-  border: none;
-  background: transparent;
-} */
+
 .register__fieldCloser > input[type="text" i] {
   border: none;
-  color: #fffffe;
+  color: #4A5043;
 
-  background-color: #004643;
+  background-color: transparent;
 
   min-height: 45px;
 }
 .register__fieldCloser > input[type="email" i] {
   border: none;
-  color: #fffffe;
+  color: #4A5043;
 
-  background-color: #004643;
+  background-color: transparent;
 
   min-height: 45px;
 }
 .register__fieldCloser > input[type="password" i] {
   border: none;
-  color: #fffffe;
+  color: #4A5043;
 
-  background-color: #004643;
+  background-color: transparent;
 
   min-height: 45px;
 }
@@ -86,16 +84,16 @@
 }
 .register__submitButton {
   border: none;
-  background: #f9bc60;
+  background: #FFCB47;
   border-radius: 3px;
-  height: 30px;
+  height: 40px;
   width: 150px;
   font-weight: 600;
   transition: all 1s linear;
 }
 .register__submitButton:hover {
   box-shadow: -5px 5px 9px -9px rgb(0, 0, 1);
-  background-color: #da8f1e;
+  background-color: #dbaa2f;
 }
 .register__illustration {
   display: flex;

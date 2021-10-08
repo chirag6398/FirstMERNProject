@@ -7,7 +7,7 @@ import { UserContext } from "../App";
 export default function Nav() {
   const { state } = useContext(UserContext);
   return (
-    <div className="nav__container" style={{ backgroundColor: "#004643" }}>
+    <div className="nav__container" style={{ backgroundColor: "#8AA1B1" }}>
       <nav className="navbar navbar-expand-lg navbar-light ">
         <Link className="navbar-brand" to="/">
           <h3 style={{ color: "#fffffe", letterSpacing: "3px" }}>MERN</h3>
